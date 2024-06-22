@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cool Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d0d0d;
+            color: #ffffff;
+        }
+
+        header {
+            background-color: #111111;
+            padding: 1em 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5em;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #1db954;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(to bottom right, #111111, #0d0d0d);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 6em; /* Increased padding for better centering */
+        }
+
+        .hero-content h1 {
+            font-size: 5em; /* Larger heading for impact */
+            margin: 0;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content p {
+            font-size: 1.8em; /* Larger paragraph text */
+            margin: 0.5em 0 1em 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #1db954;
+            padding: 0.7em 1.8em; /* Slightly larger button */
+            border-radius: 30px; /* Rounded corners */
+            font-weight: 600;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 1em; /* Spacing from paragraph */
+        }
+
+        .btn:hover {
+            background-color: #1aa34a;
+        }
+
+        section {
+            padding: 6em 0; /* Increased padding for sections */
+            text-align: center;
+            margin-top: 4em; /* More spacing between sections */
+        }
+
+        .about, .projects, .contact {
+            background-color: #111111;
+            margin: 3em 0; /* More margin for better separation */
+            padding: 2.5em; /* Increased padding for content */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+            border-radius: 10px; /* Rounded corners */
+        }
+
+        .project {
+            margin: 2em 0; /* More margin between projects */
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        footer {
+            background-color: #111111;
+            padding: 1.5em 0; /* More padding in footer */
+            text-align: center;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .socials a {
+            color: #ffffff;
+            margin: 0 1em; /* More margin between social icons */
+            font-size: 1.8em; /* Larger social icons */
+            transition: color 0.3s;
+        }
+
+        .socials a:hover {
+            color: #1db954;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to My World</h1>
+            <p>I'm Sir Veritas, a web developer and designer.</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hey there! I'm Anton, but you can call me Sir Veritas. I'm a graphic designer and web developer. I use my AI prompting skills to help make websites look awesome. They turn out pretty great, if I do say so myself. Can't wait to show some of the cool stuff that I've worked on! I'm going to try to update this website on a regular basis to make sure it continues to be exciting to read and check out.</p>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Sir Veritas</h3>
+            <p>I don't use Sir Veritas for fun; it's rather a serious project which reflects a personal journey of growth and learning. I was immersing myself in the world of web development; this means mastering such key skills as HTML, CSS, and other technologies and programming languages. This project symbolizes my dedication to constant improvement and growth in web design and development. Embracing the identity of Sir Veritas, the purpose is to blend creativity with technical proficiency to deliver digitally crafted solutions that are both beautiful and of high quality.</p>
+        </div>
+        <div class="project">
+            <h3>Motor Mori</h3>
+            <p>Motor Mori is a dedicated YouTube channel that focuses on all things related to motors. Our content includes detailed tutorials on working with engines, maintenance tips, and a variety of other motor-related topics. We strive to provide valuable information and hands-on guidance for motor enthusiasts, whether they are beginners or experienced professionals. Our goal is to share our passion for motors and help our viewers enhance their skills and knowledge in this field.</p>
+        </div>
+    </section> 
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>Feel free to reach out via email or through my social media channels.</p>
+        <p>Email: example@example.com</p>
+        <div class="socials">
+            <a href="https://x.com/Sir_Veritas_"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/SirVeritas1"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Sir Veritas</p>
+    </footer>
+</body>
+</html>
