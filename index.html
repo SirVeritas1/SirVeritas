@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sir Veritas</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
@@ -17,24 +16,30 @@
 
         header {
             background-color: #111111;
-            padding: 1em 0;
+            padding: 1em;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
+            border-radius: 0 0 15px 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: center;
             margin: 0;
             padding: 0;
         }
 
         nav ul li {
-            margin: 0 1.5em;
+            margin: 0 1em;
         }
 
         nav ul li a {
@@ -42,10 +47,13 @@
             color: #ffffff;
             font-weight: 600;
             transition: color 0.3s;
+            padding: 0.5em 1em;
+            border-radius: 5px;
         }
 
         nav ul li a:hover {
-            color: #1db954;
+            background-color: #1db954;
+            color: #ffffff;
         }
 
         .hero {
@@ -92,7 +100,7 @@
             margin-top: 4em; /* More spacing between sections */
         }
 
-        .about, .projects, .contact {
+        .about, .projects, .skills, .cv, .blog, .contact {
             background-color: #111111;
             margin: 3em 0; /* More margin for better separation */
             padding: 2.5em; /* Increased padding for content */
@@ -123,6 +131,49 @@
             color: #1db954;
         }
 
+        .blog-post {
+            cursor: pointer;
+            padding: 1em;
+            margin: 1em 0;
+            background-color: #222222;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .blog-post:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-summary {
+            margin-bottom: 1em;
+        }
+
+        .blog-content {
+            display: none;
+            margin-top: 1em;
+        }
+
+        .skills-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 1em;
+        }
+
+        .skills-list li {
+            margin: 0 1em;
+            padding: 0.5em 1em;
+            background-color: #333333;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .skills-list li:hover {
+            transform: translateY(-5px);
+        }
+
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -136,10 +187,14 @@
 <body>
     <header>
         <nav>
+            <a href="#home" class="logo"><img src="https://cdn.discordapp.com/attachments/1053243245351669822/1254874945918472382/Untitled_design_11.png?ex=667b14dd&is=6679c35d&hm=d7b98b11649e976a6d319dba9446b9f62a9d402357a4cf5a609119d29eeaac94&" alt="Logo"></a>
             <ul>
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills">CV</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -168,20 +223,54 @@
             <h3>Motor Mori</h3>
             <p>Motor Mori is a dedicated YouTube channel that focuses on all things related to motors. Our content includes detailed tutorials on working with engines, maintenance tips, and a variety of other motor-related topics. We strive to provide valuable information and hands-on guidance for motor enthusiasts, whether they are beginners or experienced professionals. Our goal is to share our passion for motors and help our viewers enhance their skills and knowledge in this field.</p>
         </div>
-    </section> 
+    </section>
 
-    <section id="contact" class="contact">
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Video recording</li>
+            <li>Long form editing</li>
+            <li>Short form editing</li>
+            <li>Graphic Design</li>
+            <li>AI Prompting</li>
+        </ul>
+        <a href="haha.html" class="btn">Download CV</a>
+    </section>
+
+
+
+        <section id="blog" class="blog">
+        <h2>Blog</h2>
+        <div class="blog-post" onclick="toggleBlogContent(this)">
+            <h3>Website updated, and more stuff added!</h3>
+            <p class="blog-summary">27 June 2024, I am very happy to say that the website has been updated with a lot of new content and features...</p>
+            <a href="blog.html" class="btn">See more of the blog</a>
+        </div>
+        </div>
+        </section>
+
+        <section id="contact" class="contact">
         <h2>Contact</h2>
         <p>Feel free to reach out via email or through my social media channels.</p>
         <p>Email: sirveritas911@gmail.com</p>
         <div class="socials">
             <a href="https://x.com/Sir_Veritas_"><i class="fab fa-twitter"></i></a>
             <a href="https://github.com/SirVeritas1"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@Sir_Veritas"><i class="fab fa-youtube"></i></a>
         </div>
-    </section>
+        </section>
 
-    <footer>
+        <footer>
         <p>&copy; 2024 Sir Veritas</p>
-    </footer>
-</body>
-</html>
+        </footer>
+
+        <script>
+        function toggleBlogContent(post) {
+            post.querySelector('.blog-summary').classList.toggle('hide');
+            post.querySelector('.blog-content').classList.toggle('show');
+        }
+        </script>
+        </body>
+        </html>
